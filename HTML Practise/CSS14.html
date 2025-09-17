@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Visual Effects - Full Demo</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 20px;
+background: #fafafa;
+line-height: 1.6;
+}
+h2 { margin-top: 50px; color: #222; border-bottom: 2px solid #ddd;
+padding-bottom: 5px; }
+h1 { color: #333; }
+/* Reusable demo styles */
+.demo-box {
+margin: 20px 0;
+padding: 20px;
+text-align: center;
+border-radius: 10px;
+color: white;
+font-weight: bold;
+}
+img { border-radius: 6px; }
+/* =======================
+1. CSS Filters
+======================== */
+.filters { display: flex; gap: 20px; flex-wrap: wrap; }
+.filters img {
+width: 200px;
+height: 150px;
+object-fit: cover;
+}
+.blur { filter: blur(5px); }
+.brightness { filter: brightness(1.7); }
+.contrast { filter: contrast(2); }
+.grayscale { filter: grayscale(100%); }
+.sepia { filter: sepia(80%); }
+/* =======================
+2. CSS Shapes & Clip-path
+======================== */
+.shapes { display: flex; gap: 20px; flex-wrap: wrap; }
+.shapes img {
+
+width: 150px;
+height: 150px;
+object-fit: cover;
+}
+.circle { clip-path: circle(50%); }
+.triangle { clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }
+.star { clip-path: polygon(50% 0%, 61% 35%, 98% 35%,
+68% 57%, 79% 91%, 50% 70%,
+21% 91%, 32% 57%, 2% 35%, 39% 35%); }
+
+.ellipse { clip-path: ellipse(60% 40% at 50% 50%); }
+/* =======================
+3. Gradients
+======================== */
+.linear { background: linear-gradient(90deg, tomato, gold, dodgerblue); }
+.radial { background: radial-gradient(circle at center, teal, navy,
+black); }
+.conic { background: conic-gradient(from 90deg, red, yellow, lime, cyan,
+blue, magenta, red); }
+.gradient-box { height: 120px; }
+/* =======================
+4. Shadows
+======================== */
+.box-shadow {
+background: white;
+color: black;
+box-shadow: 10px 10px 25px rgba(0,0,0,0.3), -5px -5px 15px
+rgba(0,0,0,0.1);
+}
+.inset-shadow {
+background: lightcoral;
+box-shadow: inset 5px 5px 15px rgba(0,0,0,0.5);
+}
+.text-shadow {
+background: darkslateblue;
+text-shadow: 3px 3px 8px rgba(0,0,0,0.7);
+font-size: 28px;
+}
+.glow-text {
+background: black;
+text-shadow: 0 0 5px cyan, 0 0 15px cyan, 0 0 25px cyan;
+font-size: 28px;
+}
+/* =======================
+5. Object-fit & Object-position
+======================== */
+
+.fit-demo { display: flex; flex-wrap: wrap; gap: 20px; }
+.fit-box {
+width: 200px;
+height: 150px;
+border: 2px solid #333;
+overflow: hidden;
+border-radius: 8px;
+}
+.fit-box img {
+width: 100%;
+height: 100%;
+}
+.cover { object-fit: cover; }
+.contain { object-fit: contain; background: #eee; }
+.top { object-fit: cover; object-position: top; }
+.left { object-fit: cover; object-position: left; }
+/* =======================
+6. CSS Masks
+======================== */
+.mask-section { display: flex; gap: 30px; flex-wrap: wrap; }
+.mask {
+width: 200px;
+height: 200px;
+background: linear-gradient(135deg, orange, purple);
+-webkit-mask-image:
+
+url('https://upload.wikimedia.org/wikipedia/commons/e/ec/Star_icon-72a7cf.svg');
+
+-webkit-mask-repeat: no-repeat;
+-webkit-mask-position: center;
+-webkit-mask-size: contain;
+mask-image:
+
+url('https://upload.wikimedia.org/wikipedia/commons/e/ec/Star_icon-72a7cf.svg');
+
+mask-repeat: no-repeat;
+mask-position: center;
+mask-size: contain;
+}
+.mask-text {
+font-size: 40px;
+font-weight: bold;
+background: linear-gradient(90deg, red, yellow, lime);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+</style>
+</head>
+<body>
+
+<h1>CSS Visual Effects - Full Demo</h1>
+<h2>1. CSS Filters</h2>
+<div class="filters">
+<img src="https://picsum.photos/200/150" alt="original">
+<img src="https://picsum.photos/200/150" class="blur" alt="blur">
+<img src="https://picsum.photos/200/150" class="brightness"
+alt="brightness">
+<img src="https://picsum.photos/200/150" class="contrast" alt="contrast">
+<img src="https://picsum.photos/200/150" class="grayscale"
+alt="grayscale">
+<img src="https://picsum.photos/200/150" class="sepia" alt="sepia">
+</div>
+<h2>2. CSS Shapes & Clip-path</h2>
+<div class="shapes">
+<img src="https://picsum.photos/300" class="circle" alt="circle">
+<img src="https://picsum.photos/300" class="triangle" alt="triangle">
+<img src="https://picsum.photos/300" class="star" alt="star">
+<img src="https://picsum.photos/300" class="ellipse" alt="ellipse">
+</div>
+<h2>3. Gradients</h2>
+<div class="demo-box gradient-box linear">Linear Gradient</div>
+<div class="demo-box gradient-box radial">Radial Gradient</div>
+<div class="demo-box gradient-box conic">Conic Gradient</div>
+<h2>4. Shadows</h2>
+<div class="demo-box box-shadow">Box Shadow</div>
+<div class="demo-box inset-shadow">Inset Shadow</div>
+<div class="demo-box text-shadow">Text Shadow</div>
+<div class="demo-box glow-text">Glow Effect</div>
+<h2>5. Object-fit & Object-position</h2>
+<div class="fit-demo">
+<div class="fit-box"><img src="https://picsum.photos/id/237/400/300"
+class="cover"></div>
+<div class="fit-box"><img src="https://picsum.photos/id/237/400/300"
+class="contain"></div>
+<div class="fit-box"><img src="https://picsum.photos/id/237/400/300"
+class="top"></div>
+<div class="fit-box"><img src="https://picsum.photos/id/237/400/300"
+class="left"></div>
+</div>
+<h2>6. CSS Masks</h2>
+<div class="mask-section">
+<div class="mask"></div>
+
+
+<div class="mask-text">Masked Gradient Text</div>
+</div>
+</body>
+</html>

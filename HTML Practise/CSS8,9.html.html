@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display & Visibility Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h2 {
+            margin-top: 40px;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        .demo-area {
+            border: 2px dashed #aaa;
+            padding: 10px;
+            margin: 15px 0;
+            background: #f9f9f9;
+        }
+
+        .box {
+            background: dodgerblue;
+            color: white;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        /* Display Examples */
+        .block {
+            display: block;
+        }
+
+        .inline {
+            display: inline;
+        }
+
+        .inline-block {
+            display: inline-block;
+            width: 100px;
+        }
+
+        .flex {
+            display: flex;
+            gap: 10px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .none {
+            display: none;
+        }
+
+        /* Visibility Examples */
+        .visible {
+            visibility: visible;
+        }
+
+        .hidden {
+            visibility: hidden;
+        }
+
+        .collapse {
+            visibility: collapse;
+        }
+
+        /* mainly affects table rows */
+        /* Opacity Examples */
+        .opacity-100 {
+            opacity: 1;
+        }
+
+        .opacity-50 {
+            opacity: 0.5;
+        }
+
+        .opacity-0 {
+            opacity: 0;
+        }
+        .div1{
+            display: block;
+            background-color: goldenrod;
+            margin: 5px;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+        }
+        img{
+            width: 150px;
+            opacity: 0.5;
+        }
+        img :hover{
+            opacity: 5;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Display, Visibility & Opacity Examples</h1>
+    <!-- DISPLAY -->
+    <h2>1. Display</h2>
+    <div class="demo-area">
+        <div class="box block">Yash Image Display Block<br>
+            <img src="YashPhoto.jpeg.jpg" alt="Yash" height="150px" width="30px">
+        </div>
+        <span class="box inline">Yash Image Display Inline<br>
+            <img src="YashPhoto.jpeg.jpg" alt="Yash" height="150px" width="30px"></span>
+        <div class="box inline-block">Yash Image Display Inline Block<br>
+            <img src="YashPhoto.jpeg.jpg" alt="Yash" height="150px" width="30px"></div>
+        <div class="flex">
+            <div class="box">Yash Image Display Flex 1<br>
+            <img src="YashPhoto.jpeg.jpg" alt="Yash" height="150px" width="30px"></div>
+            <div class="box">Yash Image Display Flex 2<br>
+            <img src="YashPhoto.jpeg.jpg" alt="Yash" height="150px" width="30px"></div>
+            <div class="box">Yash Image Display Flex 1<br>
+            <img src="YashPhoto.jpeg.jpg" alt="Yash" height="150px" width="30px"></div>
+            <div class="box">Yash Image Display Flex 2<br>
+            <img src="YashPhoto.jpeg.jpg" alt="Yash" height="150px" width="30px"></div>
+        </div>
+        <div class="grid">
+            <div class="box">Yash Image Display Grid 1<br>
+            <img src="YashPhoto.jpeg.jpg" alt="Yash" height="150px" width="30px"></div>
+            <div class="box">Yash Image Display Grid 2<br>
+            <img src="YashPhoto.jpeg.jpg" alt="Yash" height="150px" width="30px"></div>
+            <div class="box">Yash Image Display Grid 1<br>
+            <img src="YashPhoto.jpeg.jpg" alt="Yash" height="150px" width="30px"></div>
+            <div class="box">Yash Image Display Grid 2<br>
+            <img src="YashPhoto.jpeg.jpg" alt="Yash" height="150px" width="30px"></div>
+        </div>
+        <div class="box none">None (hidden)</div>
+        <p>Note: "display:none" removes the element completely.</p>
+    </div>
+    <!-- VISIBILITY -->
+    <h2>2. Visibility</h2>
+    <div class="demo-area">
+        <div class="box visible">Yash Image Visible Image<br>
+            <img src="YashPhoto.jpeg.jpg" alt="Yash" height="150px" width="30px"></div></div>
+            <img src="YashPhoto.jpeg.jpg" alt="Yash" height="150px" width="30px" style="visibility: hidden;"> here image is hidden and only space is seen</div></div>
+        <div class="box hidden">Hidden (still takes up space)</div>
+        <p>Table with collapse:</p>
+        <table border="1" cellpadding="10">
+            <tr>
+                <td class="visible">Row 1</td>
+            </tr>
+            <tr>
+                <td class="collapse">Row 2 (collapse)</td>
+            </tr>
+            <tr>
+                <td>Row 3</td>
+            </tr>
+        </table>
+    </div>
+    <!-- OPACITY -->
+    <h2>3. Opacity</h2>
+    <div class="demo-area">
+        <div class="box opacity-100">Opacity 1 (fully visible)</div>
+        <div class="box opacity-50">Opacity 0.5 (semi-transparent)</div>
+        <div class="box opacity-0">Opacity 0 (invisible but still takes space &
+            clickable)</div>
+    </div>
+    <div class="div1">Yash Tapkir Block 1</div>
+        <div class="container">
+            <div class="box">Yash Tapkir 1</div>
+            <div class="box">Yash Tapkir 2</div>
+            <div class="box">Yash Tapkir 3</div>
+    </div>
+  
+<img src="YashPhoto.jpeg.jpg" alt="Yash Image" id="rr">
+
+    
+</body>
+
+</html>

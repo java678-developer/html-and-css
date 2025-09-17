@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Transitions & Animations</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+margin: 30px;
+line-height: 1.6;
+background: #f9f9f9;
+}
+h1 {
+text-align: center;
+color: #333;
+margin-bottom: 40px;
+}
+h2 {
+margin-top: 40px;
+border-bottom: 2px solid #ddd;
+padding-bottom: 5px;
+
+
+color: #444;
+}
+p {
+margin-bottom: 15px;
+}
+/* =======================
+Transitions
+======================== */
+.transition-box {
+width: 120px;
+height: 120px;
+background: tomato;
+transition: background-color 1s ease-in-out 0.3s, transform 0.5s;
+margin: 20px 0;
+}
+.transition-box:hover {
+background-color: dodgerblue;
+transform: scale(1.2) rotate(10deg);
+}
+/* =======================
+Keyframes
+======================== */
+@keyframes bounce {
+0%, 100% { transform: translateY(0); }
+50% { transform: translateY(-50px); }
+}
+.keyframe-box {
+width: 120px;
+height: 120px;
+background: seagreen;
+margin: 20px 0;
+animation: bounce 2s infinite;
+}
+/* =======================
+Animation properties
+======================== */
+@keyframes colorShift {
+0% { background: purple; }
+50% { background: orange; }
+100% { background: purple; }
+}
+.animation-box {
+width: 150px;
+height: 150px;
+background: purple;
+
+margin: 20px 0;
+color: white;
+display: flex;
+justify-content: center;
+align-items: center;
+font-weight: bold;
+/* Animation properties */
+animation-name: colorShift;
+animation-duration: 4s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-fill-mode: forwards;
+}
+/* Layout helpers */
+.demo-section {
+background: white;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+margin-bottom: 30px;
+}
+</style>
+</head>
+<body>
+<h1>CSS Transitions & Animations</h1>
+<div class="demo-section">
+<h2>1. Transitions</h2>
+<p>Hover over the box to see transition effects (<code>property</code>,
+<code>duration</code>, <code>timing-function</code>, <code>delay</code>).</p>
+<div class="transition-box"></div>
+</div>
+<div class="demo-section">
+<h2>2. Keyframes (@keyframes)</h2>
+<p>This box uses a <code>@keyframes</code> bounce animation.</p>
+<div class="keyframe-box"></div>
+</div>
+<div class="demo-section">
+<h2>3. Animation Properties</h2>
+<p>This box demonstrates animation <code>name</code>,
+<code>duration</code>, <code>iteration</code>, <code>direction</code>, and
+<code>fill-mode</code>.</p>
+<div class="animation-box">Animate</div>
+</div>
+
+
+</body>
+</html>

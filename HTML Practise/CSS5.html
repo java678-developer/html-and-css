@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Positioning Examples</title>
+<style>
+body { font-family: Arial, sans-serif; margin: 20px; }
+h2 { margin-top: 40px; border-bottom: 2px solid #ccc; padding-bottom: 5px;
+}
+.box {
+width: 100px;
+height: 100px;
+background: dodgerblue;
+color: white;
+text-align: center;
+line-height: 100px;
+margin: 10px;
+}
+/* Static */
+.static { position: static; background: gray; }
+/* Relative */
+.relative { position: relative; top: 20px; left: 20px; background: teal; }
+/* Absolute */
+.absolute-container {
+position: relative;
+height: 150px;
+border: 2px dashed #aaa;
+}
+.absolute {
+position: absolute;
+top: 20px; left: 30px;
+background: tomato;
+}
+/* Fixed */
+.fixed {
+position: fixed;
+bottom: 10px; right: 10px;
+background: purple;
+}
+/* Sticky */
+
+
+.sticky {
+position: sticky;
+top: 0;
+background: orange;
+}
+/* Z-index */
+.z-container { position: relative; height: 150px; }
+.z1, .z2 {
+width: 120px; height: 120px;
+position: absolute; top: 20px; left: 40px;
+}
+.z1 { background: red; z-index: 1; }
+.z2 { background: blue; z-index: 2; }
+/* Overflow */
+.overflow-box {
+width: 200px; height: 100px;
+border: 2px solid #333;
+margin-bottom: 20px;
+}
+.hidden { overflow: hidden; }
+.scroll { overflow: scroll; }
+.auto { overflow: auto; }
+/* Float & Clear */
+.float-box {
+width: 100px; height: 100px;
+background: seagreen; color: white;
+float: left; margin: 10px;
+}
+.clearfix { clear: both; }
+</style>
+</head>
+<body>
+
+
+<h1>CSS Positioning Examples</h1>
+
+<h2>1. Positioning</h2>
+<div class="box static">Static</div>
+<div class="box relative">Relative</div>
+<div class="absolute-container">
+<div class="box absolute">Absolute</div>
+</div>
+<div class="box fixed">Fixed</div>
+<div class="box sticky">Sticky (Scroll me)</div>
+<p style="height:200px;">Scroll down to see sticky in action...</p>
+
+
+<h2>2. Z-index</h2>
+<div class="z-container">
+<div class="z1">z-index 1</div>
+<div class="z2">z-index 2</div>
+</div>
+
+
+<h2>3. Overflow</h2>
+<div class="overflow-box hidden">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula
+ligula vitae quam facilisis.</p>
+</div>
+<div class="overflow-box scroll">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula
+ligula vitae quam facilisis.</p>
+</div>
+<div class="overflow-box auto">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vehicula
+ligula vitae quam facilisis.</p>
+</div>
+
+
+<h2>4. Float & Clear</h2>
+<div class="float-box">Float 1</div>
+<div class="float-box">Float 2</div>
+<p class="clearfix">This paragraph is cleared below floated boxes.</p>
+</body>
+</html>
+
+

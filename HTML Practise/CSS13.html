@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Variables & Functions</title>
+<style>
+:root {
+--main-color: teal;
+--secondary-color: tomato;
+--padding-size: 20px;
+}
+body {
+font-family: Arial, sans-serif;
+margin: 20px;
+}
+h2 { margin-top: 30px; }
+.box {
+background: var(--main-color);
+color: white;
+padding: var(--padding-size);
+margin: 10px 0;
+border-radius: 8px;
+text-align: center;
+font-weight: bold;
+}
+/* calc() example */
+.calc-box {
+background: var(--secondary-color);
+width: calc(100% - 100px);
+}
+/* min() example */
+.min-box {
+background: seagreen;
+width: min(50%, 300px);
+}
+/* max() example */
+.max-box {
+background: dodgerblue;
+width: max(200px, 40%);
+
+}
+/* clamp() example */
+.clamp-text {
+background: goldenrod;
+color: black;
+font-size: clamp(14px, 2vw, 28px);
+padding: 10px;
+border-radius: 6px;
+text-align: center;
+}
+</style>
+</head>
+<body>
+<h1>CSS Variables & Functions Examples</h1>
+<h2>1. Custom Properties & var()</h2>
+<div class="box">Background from --main-color</div>
+<h2>2. calc()</h2>
+<div class="box calc-box">Width = 100% - 100px</div>
+<h2>3. min()</h2>
+<div class="box min-box">Width = min(50%, 300px)</div>
+<h2>4. max()</h2>
+<div class="box max-box">Width = max(200px, 40%)</div>
+<h2>5. clamp()</h2>
+<div class="clamp-text">Font-size = clamp(14px, 2vw, 28px)</div>
+</body>
+</html>
